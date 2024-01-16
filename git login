@@ -1,0 +1,45 @@
+To remove or change the previous Git user information, you can use the following commands. Make sure to replace `"Your New Name"` and `"your.email@example.com"` with the new user name and email you want to set.
+
+### 1. Remove Global User Configuration:
+
+```bash
+git config --global --unset-all user.name
+git config --global --unset-all user.email
+```
+
+This will remove the global user configuration, and the next time you perform a Git operation, Git will prompt you for the new user information.
+
+### 2. Set New Global User Configuration:
+
+```bash
+git config --global user.name "Your New Name"
+git config --global user.email "your.email@example.com"
+```
+
+This will set the new user name and email globally.
+
+### 3. Remove Repository-Specific User Configuration:
+
+If you also want to remove the user configuration for a specific repository, navigate to the repository's root directory and use:
+
+```bash
+git config --unset-all user.name
+git config --unset-all user.email
+```
+
+This will remove the user information for that specific repository.
+
+### Note:
+
+After making these changes, the next time you perform a Git operation (e.g., commit, push), Git will prompt you for the new user information if it's not set globally. Ensure that you provide the correct user name and email when prompted.
+
+If you want to set up a new user globally and for a specific repository simultaneously, you can combine the commands:
+
+```bash
+git config --global user.name "Your New Name"
+git config --global user.email "your.email@example.com"
+git config user.name "Your New Name"  # Inside the repository
+git config user.email "your.email@example.com"  # Inside the repository
+```
+
+This ensures that the new user information is set globally and for the specific repository.
