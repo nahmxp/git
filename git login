@@ -43,3 +43,22 @@ git config user.email "your.email@example.com"  # Inside the repository
 ```
 
 This ensures that the new user information is set globally and for the specific repository.
+
+
+
+
+## check user
+
+git config --global --get user.name
+# Output: John Doe
+
+git config --global --get user.email
+# Output: johndoe@example.com
+
+
+# set new user
+git config --global user.name "Your New Name"
+git config --global user.email "your.email@example.com"
+git config user.name "Your New Name"  # Inside the repository
+git config user.email "your.email@example.com"  # Inside the repository
+
